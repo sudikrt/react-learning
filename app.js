@@ -7,7 +7,10 @@ const heading = React.createElement (
 const parent = React.createElement (
     "div",
     {id : "parent",},
-    heading
+    [heading, React.createElement (
+        "h1", {
+        }, "Hello heading 2"
+    )]
 )
 const rootDiv = React.createElement (
     "div",
