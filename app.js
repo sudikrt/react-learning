@@ -25,12 +25,21 @@ const jsxHeading = <h1 id="heading" className="head">JSX heading</h1>;
 
 //to wirte in multiple line need to wrap in ()
 // beacuse babel needs to understand it
-const jsxHeading1 = (<h1 id="heading2" 
+const JsxHeading1 = () =>  (<h1 id="heading2" 
 className="head">JSX heading1</h1>);
+
+const jsxElement =  (<h1 id="heading2" 
+className="head">JSX Element</h1>);
+
+const FunctionalComp = () => (<div>
+    <JsxHeading1></JsxHeading1>
+    {jsxElement}
+    <h1>Demo React functional Comp</h1>
+</div>);
 
 
 console.log (jsxHeading);
 const root =  ReactDOM.createRoot (document.getElementById ("root"));
 root.render (
-    jsxHeading
+    <FunctionalComp></FunctionalComp>
 );
