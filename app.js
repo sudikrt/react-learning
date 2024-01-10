@@ -19,10 +19,23 @@ const Header = () => {
     )
 }
 
-const RestroCard = () => {
+const styleCard = {
+    backgroundColor: '#f0f0f0'
+};
+// const RestroCard = (props) => {
+// /* <h1>{props.resName}</h1>
+//<h3>{props.cuisine}</h3>
+
+const RestroCard = ({resName, cuisine}) => {
+    //console.log (props);
     return (
-        <div className="restro-card"> 
-            <h1>Rest -1</h1>
+        <div className="restro-card" style={styleCard}>
+            <img className="res-logo" src="https://www.designmantic.com/logo-images/167171.png?company=Company%20Name&slogan=&verify=1">
+                </img>  
+            <h1>{resName}</h1>
+            <h3>{cuisine}</h3>
+            <h4>4.4 stars</h4>
+            <h4>38 minutes</h4>
         </div>
     )
 }
@@ -30,9 +43,21 @@ const RestroCard = () => {
 
 const Body = () => {
     return (
-        <div className="body">
+        <div className="body" >
             <div className="search">Search</div>
             <div className="restro-container">
+                <RestroCard resName="M1" cuisine="Burger, etc"></RestroCard>
+                <RestroCard></RestroCard>
+                <RestroCard></RestroCard>
+                <RestroCard></RestroCard>
+                <RestroCard></RestroCard>
+                <RestroCard></RestroCard>
+                <RestroCard></RestroCard>
+                <RestroCard></RestroCard>
+                <RestroCard></RestroCard>
+                <RestroCard></RestroCard>
+                <RestroCard></RestroCard>
+                <RestroCard></RestroCard>
                 <RestroCard></RestroCard>
             </div>
         </div>
