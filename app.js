@@ -25,28 +25,70 @@ const styleCard = {
 // const RestroCard = (props) => {
 // /* <h1>{props.resName}</h1>
 //<h3>{props.cuisine}</h3>
-
-const RestroCard = ({resName, cuisine}) => {
-    //console.log (props);
+//console.log (props);
+const RestroCard = ({resData}) => {
     return (
         <div className="restro-card" style={styleCard}>
             <img className="res-logo" src="https://www.designmantic.com/logo-images/167171.png?company=Company%20Name&slogan=&verify=1">
                 </img>  
-            <h1>{resName}</h1>
-            <h3>{cuisine}</h3>
-            <h4>4.4 stars</h4>
-            <h4>38 minutes</h4>
+            <h1>{resData.resName}</h1>
+            <h3>{resData.cuisine?.join (',')}</h3>
+            <h4>{resData.avgRating} stars</h4>
+            <h4>{resData.costForTwo / 100 }</h4>
+            <h4>{resData.deliveryTime}</h4>
         </div>
     )
 }
 
 
+const resData = [{
+    'id' : 1,
+    'resName' : 'M1',
+    'cuisine' : ["Burger", "etc"],
+    'avgRating' : '4.4',
+    'deliveryTime' : '38 minutes',
+    'costForTwo' : 4000
+},
+{
+    'id' : 2,
+    'resName' : 'M2',
+    //'cuisine' : ["Burger","Test"],
+    'avgRating' : '4.4',
+    'deliveryTime' : '38 minutes',
+    'costForTwo' : 4000
+},
+{
+    'id' : 3,
+    'resName' : 'M3',
+    'cuisine' : ["Burger", "etc"],
+    'avgRating' : '4.4',
+    'deliveryTime' : '38 minutes',
+    'costForTwo' : 4000
+},
+{
+    'id' : 4,
+    'resName' : 'M4',
+    'cuisine' : ["Burger", "etc"],
+    'avgRating' : '4.4',
+    'deliveryTime' : '38 minutes',
+    'costForTwo' : 4000
+}
+
+];
 const Body = () => {
     return (
         <div className="body" >
             <div className="search">Search</div>
             <div className="restro-container">
-                <RestroCard resName="M1" cuisine="Burger, etc"></RestroCard>
+                {
+                    resData.map (each => <RestroCard key={each.id} resData = {each}></RestroCard>)                
+                }
+                <RestroCard resData = {resData[0]}></RestroCard>
+                <RestroCard resData = {resData[1]}></RestroCard>
+                <RestroCard resData = {resData[2]}></RestroCard>
+                <RestroCard resData = {resData[3]}></RestroCard>
+
+                {/* <RestroCard></RestroCard>
                 <RestroCard></RestroCard>
                 <RestroCard></RestroCard>
                 <RestroCard></RestroCard>
@@ -57,8 +99,7 @@ const Body = () => {
                 <RestroCard></RestroCard>
                 <RestroCard></RestroCard>
                 <RestroCard></RestroCard>
-                <RestroCard></RestroCard>
-                <RestroCard></RestroCard>
+                <RestroCard></RestroCard> */}
             </div>
         </div>
     )
