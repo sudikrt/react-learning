@@ -40,3 +40,21 @@
 // root.render (
 //     <FunctionalComp></FunctionalComp>
 // );
+
+
+React Hooks are normal JS function - written by FB developers written inside the react
+
+We have to import these utiliy function, - there are two very important hooks,
+Two most hooks
+useState () - used to create super power ful state variable - used to create state vriable - it maintains the state of your comp, creating local state inside comp
+
+useState () returns a state varibale and it is recieved in [variableName, setVaribaleName]
+pass param as default value to the variable
+setVaribaleName - used to set/udpate this list the value
+
+whenever state variable react reendering components
+
+
+
+useEffect ()
+

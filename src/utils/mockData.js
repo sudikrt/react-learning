@@ -10,7 +10,7 @@ const resData = [{
     'id' : 2,
     'resName' : 'M2',
     //'cuisine' : ["Burger","Test"],
-    'avgRating' : '4.4',
+    'avgRating' : '2.4',
     'deliveryTime' : '38 minutes',
     'costForTwo' : 4000
 },
@@ -18,7 +18,7 @@ const resData = [{
     'id' : 3,
     'resName' : 'M3',
     'cuisine' : ["Burger", "etc"],
-    'avgRating' : '4.4',
+    'avgRating' : '4.1',
     'deliveryTime' : '38 minutes',
     'costForTwo' : 4000
 },
@@ -26,7 +26,7 @@ const resData = [{
     'id' : 4,
     'resName' : 'M4',
     'cuisine' : ["Burger", "etc"],
-    'avgRating' : '4.4',
+    'avgRating' : '3.4',
     'deliveryTime' : '38 minutes',
     'costForTwo' : 4000
 }
