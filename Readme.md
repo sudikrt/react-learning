@@ -54,7 +54,18 @@ setVaribaleName - used to set/udpate this list the value
 
 whenever state variable react reendering components
 
-
-
 useEffect ()
+
+what is hook in react -> its nothing but a normal js function, which react give us, it has its own function
+ 1st arg is a callback function 
+ 2nd arg is a dependency arry
+
+It will be invoked as soon as render cycle finished
+=====
+
+What is monolith architecture ?
+
+CORS policy, - calling the api from one origin is not supported 
+cors chrome extention
+
 

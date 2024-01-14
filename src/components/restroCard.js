@@ -7,13 +7,13 @@ const styleCard = {
 const RestroCard = ({resData}) => {
     return (
         <div className="restro-card" style={styleCard}>
-            <img className="res-logo" src={CARD_URL}>
+            <img className="res-logo" src={CARD_URL + resData.cloudinaryImageId}>
                 </img>  
-            <h1>{resData.resName}</h1>
-            <h3>{resData.cuisine?.join (',')}</h3>
+            <h1>{resData.name}</h1>
+            <h3>{resData.cuisines?.join (',')}</h3>
             <h4>{resData.avgRating} stars</h4>
-            <h4>{resData.costForTwo / 100 }</h4>
-            <h4>{resData.deliveryTime}</h4>
+            <h4>{resData.costForTwo }</h4>
+            {/* <h4>{resData.sla.deliveryTime}</h4> */}
         </div>
     )
 }
