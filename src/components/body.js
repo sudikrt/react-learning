@@ -5,6 +5,7 @@ import Shimmer from "./shimmer";
 
 const Body = () => {
     const [listOfRestaurants, setListOfRestaurants] = useState ([]);
+    const [filteredRestaurants, setfilteredRestaurants] = useState ([]);
     const [searchText, setSearchText] = useState ([]);
 
     //after your componet renders
@@ -20,6 +21,7 @@ const Body = () => {
         const json = await data.json ();
         
         setListOfRestaurants (json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants.map (each => each.info));
+        setfilteredRestaurants (listOfRestaurants);
     }
 
     if (listOfRestaurants.length === 0) {
@@ -34,18 +36,17 @@ const Body = () => {
                     }}>
                     </input>
                     <button onClick={ () => {
-                        console.log ('searchText : ' + searchText);
-                        setListOfRestaurants (listOfRestaurants.filter (ele => ele.name === searchText ))
+                        setfilteredRestaurants (listOfRestaurants.filter (ele => ele.name.toLowerCase ().includes( searchText.toLowerCase () ) ));
                     }}>Search</button>
                 </div>
                 <button className="filter-btn" onClick={() => {
-                    setListOfRestaurants (listOfRestaurants.filter (ele => ele.avgRating > 4));
+                    setfilteredRestaurants (listOfRestaurants.filter (ele => ele.avgRating > 4));
                 }}>Top Rated Restr</button>
             </div>
             
             <div className="restro-container">
                 {
-                    listOfRestaurants.map (each => <RestroCard key={each.id} resData = {each}></RestroCard>)                
+                    filteredRestaurants.map (each => <RestroCard key={each.id} resData = {each}></RestroCard>)                
                 }
                 
             </div>
