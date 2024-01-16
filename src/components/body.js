@@ -1,5 +1,4 @@
 import RestroCard from "./restroCard";
-import resData from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./shimmer";
 
@@ -19,9 +18,9 @@ const Body = () => {
             "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&page_type=DESKTOP_WEB_LISTING"            
         );
         const json = await data.json ();
-        
         setListOfRestaurants (json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants.map (each => each.info));
-        setfilteredRestaurants (listOfRestaurants);
+        //I think it will check memory change not exactly value change
+        setfilteredRestaurants (json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants.map (each => each.info));
     }
 
     if (listOfRestaurants.length === 0) {
