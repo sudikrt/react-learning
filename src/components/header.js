@@ -1,10 +1,30 @@
 import { LOGO_URL } from "../utils/constants";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
     //its a special local variable 
     // when the state variable changes react will render the components.
+    //never use useState outside of yoru component
+    //use at the top of the begining
+    //never create inside if, can create incosistances 
+    //never create inside loop
+    
     const [btnName, setBtnName] = useState ('Login');
+
+    //when useEffect called after every render of the component
+    //2nd param- dependecny array changes the behaviours of its renders
+    //its not mandatory for 2nd param 
+    //if no dependency array useEffect is called every render
+    //
+    // what if there is a empty dependecy array - then useEffect is called on only initial render. 
+    //and jsut once when the component is rendered
+    //
+    // what if we put somthing inside the array - it will be only be called when dependency changes
+    //[btnName]- called everytime if [btnName] react changes useEffect is called
+
+    useEffect (() => {
+
+    }, [btnName]);
 
     return (
         <div className="header">
