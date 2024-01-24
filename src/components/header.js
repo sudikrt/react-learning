@@ -1,6 +1,13 @@
 import { LOGO_URL } from "../utils/constants";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
+
+{
+    /**
+     * Link component;
+     */
+}
 const Header = () => {
     //its a special local variable 
     // when the state variable changes react will render the components.
@@ -8,7 +15,7 @@ const Header = () => {
     //use at the top of the begining
     //never create inside if, can create incosistances 
     //never create inside loop
-    
+
     const [btnName, setBtnName] = useState ('Login');
 
     //when useEffect called after every render of the component
@@ -34,9 +41,18 @@ const Header = () => {
             </div>
             <div className="nav-items">
                 <ul>
-                    <li>Home</li>
-                    <li>About us</li>
-                    <li>Cart</li>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/aboutus">About us</Link>
+                    </li>
+                    <li>
+                        <Link to="/contactus">Contact us</Link>
+                    </li>
+                    <li>
+                        <Link to="/cart">Cart</Link>
+                    </li>
                     <button className="login-btn" onClick={() => {
                         setBtnName (btnName === 'Login' ? 'Logout' : 'Login');
                     }}>{btnName}</button>
