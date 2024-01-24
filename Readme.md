@@ -69,3 +69,12 @@ CORS policy, - calling the api from one origin is not supported
 cors chrome extention
 
 
+React application are single page application 
+its just changing the components rather then reloading the page
+
+# Routing in web apps
+client side 
+Server side
+
+
+
