@@ -76,5 +76,9 @@ its just changing the components rather then reloading the page
 client side 
 Server side
 
+# Why class based comps needed 
+Class based comps in the older way of creating the comps
+Understaing of react becomes stroger..!
+It will help us in identifying the react comp life cycle
 
 

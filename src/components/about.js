@@ -1,4 +1,10 @@
+import UserCard from "./usercard";
 const About = () => {
-    return <h2>about</h2>
+    return (
+        <div>
+            <h1>About us</h1>
+            <UserCard></UserCard>
+        </div>
+    );
 }
 export default About;
