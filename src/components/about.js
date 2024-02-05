@@ -19,6 +19,71 @@ class About extends React.Component {
                      * then render is called 
                      */
                 }
+                {
+                    /**
+                     * how the life cycle will work when there are two instance of of UserClass is used
+                     * 
+                     *  About constructor is called : 
+                        about.js:10 About render is called : 
+
+                            userClass.js:22 Sud-class : UserClass constructor is called : 
+                            userClass.js:28 Sud-class:  UserClass render is called : 
+                            
+                            userClass.js:22 Mad-class : UserClass constructor is called : 
+                            userClass.js:28 Mad-class:  UserClass render is called : 
+                            
+                            userClass.js:25 Sud-class :UserClass componentDidMount is called : 
+                            userClass.js:25 Mad-class :UserClass componentDidMount is called : 
+                            
+                        about.js:46 About componentDidMount is called : 
+
+                        why life cycle method works like this ? 
+
+                        Something known as react lifecycle methods diagram 
+
+                        project.wojtekmaj.pl/react-lifecycle-method-diagram
+
+                        there are two phase 
+
+                        render phase 
+                            when comp is mounting - first constructor then render is call
+
+                        commit phase 
+                            then react actually updates the dom and componentdidmount is called 
+
+
+                        recat optimizes the render phase for these two child, react will batch the render pahse for these two chile
+
+                        these two child render pahse and commit phase will happen togather
+
+                        calls render phase for 
+                            first child
+                            second child
+
+                        commit phase is batched togather.
+
+
+                        once the render phase is batched togathen, the commit phase will happen togather
+
+                        why its like that ?  react is batching up if for multiple chiled 
+
+                        once commit phase starts react tries to updates the dom 
+
+                        dom manupilation is a costly job.
+
+                        everything is happening inside a virtula dom 
+
+
+                        commit phase takes time, it batchs the child comps are rendered, 
+
+                        manipulatuion DOM is a expenseve task.
+
+                        react tries to batch up the jobs
+                        
+
+                     */
+                }
+                <UserClass name={"Mad-class"} location="Mlore"></UserClass>
             </div> 
         )
     }
@@ -33,7 +98,7 @@ class About extends React.Component {
      * 
      * once all the children componentDidMount () called, then the parent componentDidMount is called
      * 
-     * why do we need componentDidMount is needed  ? -  used to make api calls after the component is loaded into the dom,
+     * why do we need componentDidMount is needed  ? -  used to make api calls, why inside componentDidMount? after the component is loaded into the dom,
      * 
      */
     componentDidMount () {

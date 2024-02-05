@@ -19,13 +19,13 @@ class UserClass extends React.Component {
             count : 0,
             count1 : 1
         };
-        console.log ('UserClass constructor is called : ');
+        console.log (this.props.name + ' : UserClass constructor is called : ');
     }
     componentDidMount () {
-        console.log ('UserClass componentDidMount is called : ');
+        console.log (this.props.name + ' :UserClass componentDidMount is called : ');
     }
     render () {
-        console.log ('UserClass render is called : ');
+        console.log (this.props.name + ':  UserClass render is called : ');
         //this can be destructured
         const {name, location} = this.props;
         return (
