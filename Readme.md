@@ -82,3 +82,20 @@ Understaing of react becomes stroger..!
 It will help us in identifying the react comp life cycle
 
 
+# life cicle react class component
+As soon user class is loaded constructor was called and state variable is created
+with default value.
+Render happend with default value. which means react will update the value with dummy data
+then after component did mount was called and api call is made 
+and it called set state, then Updating cycle begins
+
+when we do setState () it calls the updating -> react triggers rendering cycle again, with state varibale with updated value.
+
+now it will call componentDid update (), is called later on 
+
+
+
+
+
+
+

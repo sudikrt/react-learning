@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const UserCard = (props) => {
     /**
      * behind the scenes react maintain in one big object for state
@@ -6,6 +6,17 @@ const UserCard = (props) => {
      */
     const [count, setCount] = useState (0);
     const [count1, setCountOne] = useState (1);
+
+    useEffect (() => {
+        //api calls
+    }, []);
+
+    async function getUserDetails () {
+        const data = await fetch ('https://api.github.com/users/sudikrt');
+        const json  = await data.json ();
+
+        console.log (json);
+    }
     return (
         <div className="user-card">
             <h1> count = {count}</h1>
