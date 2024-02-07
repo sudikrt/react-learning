@@ -45,11 +45,24 @@ class UserClass extends React.Component {
     }
 
     componentWillUnmount () {
+        clearInterval (this.interval);
         //called just before our component is unmounting
         console.log (this.props.name + ' :UserClass componentWillUnmount is called : ');
+        //called when we leaving the page / unmounting 
     }
 
     async componentDidMount () {
+        /**
+         * now if I move to home page its still running the interval
+         * It started two intervals
+         * it is not reloading the page.
+         * every time comp is instansiated it will create set interval
+         */
+        this.interval = setInterval (() => {
+            console.log ('React op')
+        }, 1000);
+        
+
         console.log (this.props.name + ' :UserClass componentDidMount is called : ');
         const data = await fetch ('https://api.github.com/users/sudikrt');
         const json  = await data.json ();

@@ -7,8 +7,23 @@ const UserCard = (props) => {
     const [count, setCount] = useState (0);
     const [count1, setCountOne] = useState (1);
 
+    /**
+     * what happens if setInterval inside useEffect ?
+     */
     useEffect (() => {
         //api calls
+        const interval = setInterval (() => {
+            console.log ('setInterval : userCard');
+        },1000) 
+
+        /**
+         * it will return a function called only when 
+         * called when unmounting the component 
+         */
+        return () => {
+            console.log ('useEffect. return');
+            clearInterval (interval);
+        };
     }, []);
 
     async function getUserDetails () {

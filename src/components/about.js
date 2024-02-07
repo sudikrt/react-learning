@@ -79,11 +79,13 @@ class About extends React.Component {
                         manipulatuion DOM is a expenseve task.
 
                         react tries to batch up the jobs
-                        
+
 
                      */
                 }
                 <UserClass name={"Mad-class"} location="Mlore"></UserClass>
+
+                <UserCard name={"Card-class"} location="Mlore"></UserCard>
             </div> 
         )
     }
