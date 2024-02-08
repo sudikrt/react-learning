@@ -1,28 +1,13 @@
-import { useEffect, useState } from "react";
 import Shimmer from "./shimmer";
 import { useParams } from "react-router-dom";
-import { MENU_API_URL } from "../utils/constants";
+import useRestroMenu from "../utils/useRestroMenu";
 
 const RestroMenuPage = () => {
-
-    const [resInfo, setResInfo] = useState (null);
-
     const {resId} = useParams ();
+
     console.log (resId);
 
-    useEffect ( () => {
-        fetchData ();
-    }, []);
-    /**Empty dependency arry only once on initil render */
-
-    const fetchData = async () => {
-        const data = await fetch (
-            `${MENU_API_URL + resId}`
-        );
-        const json = await data.json ();
-        console.log (json);
-        setResInfo (json.data);
-    }
+    const resInfo = useRestroMenu (resId);
 
     if (resInfo == null) {
         return (<Shimmer></Shimmer>) ;

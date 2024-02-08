@@ -94,6 +94,17 @@ when we do setState () it calls the updating -> react triggers rendering cycle a
 now it will call componentDid update (), is called later on 
 
 
+in useEffect
+Empty dependency arry only once on initil render
+
+# customHooks
+Hooks are normal java script functions which are just given us by react, useState, useEffect, useParams 
+
+Hooks are utility function
+
+
+
+
 
 
 
