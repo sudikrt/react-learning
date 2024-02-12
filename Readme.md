@@ -102,6 +102,14 @@ Hooks are normal java script functions which are just given us by react, useStat
 
 Hooks are utility function
 
+# Chuncking
+code splitting
+Dynamic bundling 
+allows to load the app files 
+Lazy loading
+dynamic import as well
+all of these by lazy loading
+
 
 
 
