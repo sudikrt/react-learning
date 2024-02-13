@@ -6,7 +6,7 @@ const styleCard = {
 
 const RestroCard = ({resData}) => {
     return (
-        <div className="restro-card" style={styleCard}>
+        <div className="restro-card m-4 p-4 w-48" style={styleCard}>
             <img className="res-logo" src={CARD_URL + resData.cloudinaryImageId}>
                 </img>  
             <h1>{resData.name}</h1>

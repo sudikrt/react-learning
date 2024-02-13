@@ -1,3 +1,11 @@
+/* 
+Kind of importing tailwind css
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
 #heading {
     color: red;
 }
@@ -19,7 +27,7 @@
 }
 .restro-card {
     width: 200px;
-    /* height: 350px; */
+    /* height: 350px; 
     padding: 5px;
     margin: 5px;
 }
@@ -66,4 +74,4 @@
 .user-card {
     padding: 10px;
     border: 1px solid black;
-}
+} */

@@ -110,6 +110,27 @@ Lazy loading
 dynamic import as well
 all of these by lazy loading
 
+# different css
+Styled components
+sass
+scss
+tailwind
+material ui
+ant ui
+chakra ui
+
+
+installing two css
+tailwind and poscss
+tailwind uses behind the scens -> tool for transform css into js,
+
+npx -> invoke or executing
+
+npx tailwindcss init -> will create tailwind.config.js
+
+parcel need to use postcssrc to read / understand tailwind
+
+
 
 
 

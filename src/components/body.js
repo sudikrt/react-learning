@@ -36,19 +36,21 @@ const Body = () => {
     }
     return (
         <div className="body" >
-            <div className="filter">
-                <div className="search">
-                    <input type="text" className="search-box" value={searchText} onChange={(e) => {
+            <div className="filter flex">
+                <div className="search m-4 p-4">
+                    <input type="text" className="search-box border border-solid border-black" value={searchText} onChange={(e) => {
                         setSearchText (e.target.value);
                     }}>
                     </input>
-                    <button onClick={ () => {
+                    <button className="bg-green-100 m-4 px-4 py-1 rounded-lg" onClick={ () => {
                         setfilteredRestaurants (listOfRestaurants.filter (ele => ele.name.toLowerCase ().includes( searchText.toLowerCase () ) ));
                     }}>Search</button>
                 </div>
-                <button className="filter-btn" onClick={() => {
-                    setfilteredRestaurants (listOfRestaurants.filter (ele => ele.avgRating > 4));
-                }}>Top Rated Restr</button>
+                <div className="self-center">
+                    <button className="filter-btn bg-green-100 m-4 px-4 py-1 rounded-lg" onClick={() => {
+                        setfilteredRestaurants (listOfRestaurants.filter (ele => ele.avgRating > 4));
+                    }}>Top Rated Restr</button>
+                </div>
             </div>
             
             <div className="restro-container">
