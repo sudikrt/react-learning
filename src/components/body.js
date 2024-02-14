@@ -53,7 +53,7 @@ const Body = () => {
                 </div>
             </div>
             
-            <div className="restro-container">
+            <div className="restro-container flex flex-wrap">
                 {
                     filteredRestaurants.map (each => 
                     <Link key={each.id} to={'restro/' + each.id}>
