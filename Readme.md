@@ -131,6 +131,8 @@ npx tailwindcss init -> will create tailwind.config.js
 parcel need to use postcssrc to read / understand tailwind
 
 
+# Higher order component is a function that takes a component enhances it and returns a component 
+
 
 
 

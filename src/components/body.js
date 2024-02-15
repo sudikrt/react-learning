@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { withPromotedLabel } from "./restroCard";
 
 const Body = () => {
     const [listOfRestaurants, setListOfRestaurants] = useState ([]);

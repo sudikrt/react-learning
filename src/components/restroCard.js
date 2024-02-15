@@ -22,4 +22,22 @@ const RestroCard = ({resData}) => {
         </div>
     )
 }
+
+/**
+ * higher order component
+ * input => restroCard output => Restrocard Promoted
+ */
+
+export const withPromotedLabel = (RestroCard) => {
+    return () => {
+        return (
+            <div>
+                <label>Promoted</label>
+                <RestroCard></RestroCard>
+            </div>
+        )
+    }
+}
+
+
 export default RestroCard;
