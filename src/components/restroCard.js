@@ -26,14 +26,17 @@ const RestroCard = ({resData}) => {
 /**
  * higher order component
  * input => restroCard output => Restrocard Promoted
+ * 
+ * when we write higher comps 
+ * these higher order comps are pure functions.
  */
 
 export const withPromotedLabel = (RestroCard) => {
-    return () => {
+    return (props) => {
         return (
             <div>
                 <label>Promoted</label>
-                <RestroCard></RestroCard>
+                <RestroCard {...props}></RestroCard>
             </div>
         )
     }
