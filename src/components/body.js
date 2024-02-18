@@ -60,7 +60,7 @@ const Body = () => {
                 {
                     filteredRestaurants.map (each => 
                     <Link key={each.id} to={'restro/' + each.id}>
-                        {each.data.promoted 
+                        {each.promoted 
                         ? <RestroCardPromoted resData = {each}></RestroCardPromoted>
                         : <RestroCard  resData = {each}></RestroCard>}
                     </Link>)                

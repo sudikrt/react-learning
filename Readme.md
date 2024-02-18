@@ -133,6 +133,11 @@ parcel need to use postcssrc to read / understand tailwind
 
 # Higher order component is a function that takes a component enhances it and returns a component 
 
+Pure function means that it will not change ony of the behaviour of the comp and leveraging the comps with enhancement
+used to enhance teh comps
+
+
+
 
 
 
